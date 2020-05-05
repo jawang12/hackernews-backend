@@ -1,0 +1,23 @@
+type Link {
+  id: ID! @unique
+  createdAt: DateTime!
+  description: String!
+  url: String!
+  postedBy: User @relation(name: "UsersLinks")
+  votes: [Vote!]! @relation(name: "VotesToLink")
+}
+
+type User {
+  id: ID! @unique
+  name: String!
+  email: String! @unique
+  password: String!
+  links: [Link!]! @relation(name: "UsersLinks")
+  votes: [Vote!]! @relation(name: "VotesByUser")
+}
+
+type Vote {
+  id: ID! @unique
+  link: Link! @relation(name: "VotesToLink")
+  user: User! @relation(name: "VotesByUser")
+}

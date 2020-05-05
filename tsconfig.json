@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist",
+    "sourceMap": true,
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
+    "esModuleInterop": true,
+    "noFallthroughCasesInSwitch": true,
+    "target": "es6",
+    "lib": ["es2018", "dom", "esnext.asynciterable"],
+    "typeRoots": ["node_modules/@types"]
+  },
+  "include": ["**/*", "./src/**/*.tsx", "./src/**/*.ts"]
+}
